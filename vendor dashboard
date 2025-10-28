@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventra - Vendor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 flex min-h-screen">
+    <!-- ===== Sidebar ===== -->
+    <aside class="w-64 bg-pink-700 text-white flex flex-col fixed h-full">
+      <div class="p-6 text-center border-b border-pink-500">
+        <h1 class="text-2xl font-bold">Eventra</h1>
+        <p class="text-sm mt-1 opacity-80">Vendor Dashboard</p>
+      </div>
+      <nav class="flex-1 mt-6">
+        <ul class="space-y-3 px-4">
+          <li>
+            <a href="vendor-dashboard.html" class="block bg-pink-600 py-2 px-4 rounded-lg font-medium">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block hover:bg-pink-600 py-2 px-4 rounded-lg font-medium">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block hover:bg-pink-600 py-2 px-4 rounded-lg font-medium">
+              Bookings
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block hover:bg-pink-600 py-2 px-4 rounded-lg font-medium">
+              Payments
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="block hover:bg-pink-600 py-2 px-4 rounded-lg font-medium">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== Main Dashboard ===== -->
+    <main class="ml-64 flex-1 p-8">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-800">Dashboard Overview</h2>
+        <p class="text-gray-600">Welcome, <span class="text-pink-600 font-semibold">Royal Palace Banquet</span></p>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div class="bg-white shadow-md rounded-xl p-5 text-center">
+          <h3 class="text-gray-600 text-sm font-medium">Total Bookings</h3>
+          <p class="text-3xl font-bold text-pink-600 mt-2">45</p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-5 text-center">
+          <h3 class="text-gray-600 text-sm font-medium">Pending Requests</h3>
+          <p class="text-3xl font-bold text-yellow-500 mt-2">8</p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-5 text-center">
+          <h3 class="text-gray-600 text-sm font-medium">Completed Events</h3>
+          <p class="text-3xl font-bold text-green-600 mt-2">37</p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-5 text-center">
+          <h3 class="text-gray-600 text-sm font-medium">Earnings (₹)</h3>
+          <p class="text-3xl font-bold text-blue-600 mt-2">₹2.8L</p>
+        </div>
+      </section>
+
+      <!-- Recent Bookings Table -->
+      <section class="bg-white rounded-2xl shadow-md p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Recent Bookings</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-pink-600 text-white">
+              <tr>
+                <th class="px-4 py-2">Customer</th>
+                <th class="px-4 py-2">Event Date</th>
+                <th class="px-4 py-2">Service</th>
+                <th class="px-4 py-2">Amount</th>
+                <th class="px-4 py-2">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-4 py-3">Neha Sinha</td>
+                <td class="px-4 py-3">10 Dec 2025</td>
+                <td class="px-4 py-3">Wedding Venue</td>
+                <td class="px-4 py-3">₹80,000</td>
+                <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Confirmed</span></td>
+              </tr>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-4 py-3">Rohit Kumar</td>
+                <td class="px-4 py-3">12 Dec 2025</td>
+                <td class="px-4 py-3">Reception</td>
+                <td class="px-4 py-3">₹70,000</td>
+                <td class="px-4 py-3"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Pending</span></td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3">Amit Sharma</td>
+                <td class="px-4 py-3">15 Dec 2025</td>
+                <td class="px-4 py-3">Engagement</td>
+                <td class="px-4 py-3">₹50,000</td>
+                <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center mt-10 text-gray-600">
+        © <span id="year"></span> Eventra. All rights reserved.
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+  </body>
+</html>
