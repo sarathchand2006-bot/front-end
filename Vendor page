@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventra - Vendor Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- ===== Navbar ===== -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-2xl font-extrabold text-pink-600 tracking-wide">Eventra</h1>
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="index.html" class="hover:text-pink-600">Home</a></li>
+          <li><a href="services.html" class="hover:text-pink-600">Vendors</a></li>
+          <li><a href="#" class="hover:text-pink-600">About</a></li>
+          <li><a href="#" class="hover:text-pink-600">Contact</a></li>
+        </ul>
+        <button class="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition">
+          Login
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="pt-28 pb-10 bg-gradient-to-r from-pink-600 to-pink-400 text-white text-center">
+      <h1 class="text-4xl font-bold mb-2">Royal Palace Banquet</h1>
+      <p class="text-lg text-gray-100">Patna, Bihar • Wedding Venue</p>
+    </section>
+
+    <!-- ===== Gallery Section ===== -->
+    <section class="max-w-6xl mx-auto px-6 mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img src="venue.jpg" alt="Venue Photo" class="rounded-xl shadow-md object-cover w-full h-60">
+      <img src="decor.jpg" alt="Decor" class="rounded-xl shadow-md object-cover w-full h-60">
+      <img src="photographer.jpg" alt="Photographer" class="rounded-xl shadow-md object-cover w-full h-60">
+    </section>
+
+    <!-- ===== Vendor Info Section ===== -->
+    <section class="max-w-6xl mx-auto px-6 mt-14 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Left Column -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">About Royal Palace Banquet</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Royal Palace Banquet is one of Patna’s most luxurious wedding venues. With elegant halls,
+          customizable decor, and world-class catering, it’s perfect for hosting unforgettable events.
+          Our expert team ensures every detail of your wedding is flawless and memorable.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Services Offered</h3>
+        <ul class="list-disc list-inside text-gray-600 mb-6">
+          <li>Banquet Hall with 500+ capacity</li>
+          <li>Custom Decoration & Lighting</li>
+          <li>In-house Catering</li>
+          <li>Parking & Security</li>
+          <li>DJ & Music Setup</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pricing Details</h3>
+        <p class="text-pink-600 text-lg font-bold">₹80,000 per day</p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="bg-white shadow-md rounded-2xl p-6">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Book This Vendor</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Name</label>
+            <input type="text" placeholder="Your name" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Email</label>
+            <input type="email" placeholder="Your email" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Phone</label>
+            <input type="tel" placeholder="Your phone number" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Event Date</label>
+            <input type="date" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+          </div>
+          <button type="button" class="w-full bg-pink-600 text-white py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+            Book Now
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Reviews Section ===== -->
+    <section class="max-w-6xl mx-auto px-6 mt-20 mb-20">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Customer Reviews</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Review Card -->
+        <div class="bg-white shadow-md rounded-2xl p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Neha & Rakesh</h3>
+          <p class="text-gray-600 text-sm mb-2">⭐⭐⭐⭐⭐</p>
+          <p class="text-gray-600 text-sm">
+            “Beautiful venue! The staff was extremely professional and cooperative. Our wedding looked magical thanks to their team.”
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Amit Sharma</h3>
+          <p class="text-gray-600 text-sm mb-2">⭐⭐⭐⭐</p>
+          <p class="text-gray-600 text-sm">
+            “Good experience overall. Decoration was excellent, food was delicious. Highly recommended for large gatherings.”
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Priya Sinha</h3>
+          <p class="text-gray-600 text-sm mb-2">⭐⭐⭐⭐⭐</p>
+          <p class="text-gray-600 text-sm">
+            “Everything was perfect! The lighting, music, and ambiance were just as we imagined for our big day.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p>© <span id="year"></span> Eventra. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+  </body>
+</html>
