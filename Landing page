@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventra - Plan Your Dream Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+
+    <!-- ===== Navbar ===== -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-2xl font-extrabold text-pink-600 tracking-wide">Eventra</h1>
+
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#" class="hover:text-pink-600">Home</a></li>
+          <li><a href="#" class="hover:text-pink-600">Vendors</a></li>
+          <li><a href="#" class="hover:text-pink-600">About</a></li>
+          <li><a href="#" class="hover:text-pink-600">Contact</a></li>
+        </ul>
+
+        <button class="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition">
+          Login
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section
+      class="relative flex items-center justify-center h-[90vh] text-center text-white bg-cover bg-center"
+      style="background-image: url('hero-bg.jpg');"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+          Plan Your Dream <span class="text-pink-400">Wedding</span> With Eventra
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          Discover trusted vendors, venues, photographers, and more — all in one place.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="flex bg-white rounded-full overflow-hidden shadow-lg w-full max-w-lg mx-auto">
+          <input
+            type="text"
+            placeholder="Search for services (e.g. photographer, venue...)"
+            class="flex-grow px-5 py-3 text-gray-700 focus:outline-none"
+          />
+          <button class="bg-pink-600 px-6 py-3 text-white font-medium hover:bg-pink-700 transition">
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Popular Services ===== -->
+    <section class="py-20 bg-gray-100">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+        Popular Wedding Services
+      </h2>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
+        <!-- Service Cards -->
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 overflow-hidden">
+          <img src="venue.jpg" alt="Venues" class="object-cover w-full h-48" />
+          <div class="p-5 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Venues</h3>
+            <button class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm hover:bg-pink-700 transition">
+              Explore
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 overflow-hidden">
+          <img src="photographer.jpg" alt="Photographers" class="object-cover w-full h-48" />
+          <div class="p-5 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Photographers</h3>
+            <button class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm hover:bg-pink-700 transition">
+              Explore
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 overflow-hidden">
+          <img src="makeup.jpg" alt="Makeup Artists" class="object-cover w-full h-48" />
+          <div class="p-5 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Makeup Artists</h3>
+            <button class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm hover:bg-pink-700 transition">
+              Explore
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 overflow-hidden">
+          <img src="decor.jpg" alt="Decorators" class="object-cover w-full h-48" />
+          <div class="p-5 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Decorators</h3>
+            <button class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm hover:bg-pink-700 transition">
+              Explore
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Call to Action ===== -->
+    <section class="py-16 bg-pink-600 text-white text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Plan Your Dream Event?</h2>
+      <p class="text-lg mb-6">
+        Join thousands of couples who trust Eventra to make their moments unforgettable.
+      </p>
+      <button class="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+        Get Started
+      </button>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p>© <span id="year"></span> Eventra. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+  </body>
+</html>
