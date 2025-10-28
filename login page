@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventra - Login / Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- ===== Navbar ===== -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-2xl font-extrabold text-pink-600 tracking-wide">Eventra</h1>
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="index.html" class="hover:text-pink-600">Home</a></li>
+          <li><a href="services.html" class="hover:text-pink-600">Vendors</a></li>
+          <li><a href="#" class="hover:text-pink-600">About</a></li>
+          <li><a href="#" class="hover:text-pink-600">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== Login Section ===== -->
+    <section class="flex items-center justify-center min-h-screen pt-20 bg-gradient-to-r from-pink-600 to-pink-400">
+      <div class="bg-white rounded-2xl shadow-lg w-full max-w-4xl flex flex-col md:flex-row overflow-hidden">
+        <!-- Left Side (Image) -->
+        <div class="md:w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('venue.jpg')"></div>
+
+        <!-- Right Side (Form) -->
+        <div class="w-full md:w-1/2 p-10">
+          <h2 id="form-title" class="text-3xl font-bold text-pink-600 mb-6 text-center">
+            Welcome Back
+          </h2>
+
+          <!-- Login Form -->
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" placeholder="Your email" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" required />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Password</label>
+              <input type="password" placeholder="Your password" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" required />
+            </div>
+            <button type="button" class="w-full bg-pink-600 text-white py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+              Login
+            </button>
+          </form>
+
+          <!-- Signup Form (Hidden by Default) -->
+          <form id="signup-form" class="space-y-4 hidden">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Full Name</label>
+              <input type="text" placeholder="Your full name" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" required />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" placeholder="Your email" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" required />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Password</label>
+              <input type="password" placeholder="Create a password" class="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" required />
+            </div>
+            <button type="button" class="w-full bg-pink-600 text-white py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+              Sign Up
+            </button>
+          </form>
+
+          <!-- Toggle Links -->
+          <div class="text-center mt-4 text-gray-700">
+            <p id="toggle-to-signup">
+              Don't have an account?
+              <button class="text-pink-600 font-semibold hover:underline">Sign Up</button>
+            </p>
+            <p id="toggle-to-login" class="hidden">
+              Already have an account?
+              <button class="text-pink-600 font-semibold hover:underline">Login</button>
+            </p>
+          </div>
+
+          <!-- Dummy Social Login Buttons -->
+          <div class="mt-8 text-center">
+            <p class="text-gray-500 mb-3">Or continue with</p>
+            <div class="flex justify-center gap-4">
+              <button class="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100 flex items-center gap-2">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" width="18" />
+                Google
+              </button>
+              <button class="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100 flex items-center gap-2">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="18" />
+                Facebook
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p>© <span id="year"></span> Eventra. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== Script ===== -->
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+
+      // Toggle between login and signup forms
+      const loginForm = document.getElementById("login-form");
+      const signupForm = document.getElementById("signup-form");
+      const toggleSignup = document.getElementById("toggle-to-signup");
+      const toggleLogin = document.getElementById("toggle-to-login");
+      const title = document.getElementById("form-title");
+
+      toggleSignup.addEventListener("click", () => {
+        loginForm.classList.add("hidden");
+        signupForm.classList.remove("hidden");
+        toggleSignup.classList.add("hidden");
+        toggleLogin.classList.remove("hidden");
+        title.innerText = "Create Your Account";
+      });
+
+      toggleLogin.addEventListener("click", () => {
+        signupForm.classList.add("hidden");
+        loginForm.classList.remove("hidden");
+        toggleLogin.c
